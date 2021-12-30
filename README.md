@@ -1,18 +1,9 @@
-## Getting Started
+Memento é um padrão de projeto comportamental correspondente a uma das grandes necessidades do usuário: o comportamento de desfazer, também popularizado como “CTRL + Z”. Sem violar o encapsulamento, tem como premissa a captura e externalização de um estado interno de um objeto, de modo a garantir que o mesmo possa ser posteriormente restaurado.
+Ao entender o seu funcionamento, percebemos que além da original é necessário ao menos duas outras para tornar a premissa verdadeira: Uma, chamada de Caretaker, teria a responsabilidade de gerir os backups a medida que mudanças são feitas no objeto, já que é desacoplada tal função da classe principal com o intuito de ser mais simples a restauração de dados; e a outra, entitulado de Memento, de garantir o encapsulamento e segurança de dados, servindo como ponte com o último estado (de forma opaca) a possivelmente ser restaurado. Os dados pertencentes a classe originadora poderão ser utilizadas apenas pela mesma, ao solicitar ao Memento, pois as demais não podem ter acesso as informações privadas contidas nele, apenas realizarão a manipulação da classe.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Partindo dessa afirmação desenvolvemos:
+1.  Primeiramente, a classe Original com os atributos privados como: stade e date; e métodos de: getter, setter, saveToMemento, getFromMemento;
+2. Em seguida a classe Memento com os atributos encapsulados da classe principal e o método de getState ?;
+3. E por último, a classe de Caretaker desenvolvida com pilha, a fim de garantir o conceito de FILO (First-in, Last-out), ou seja, que o empilhamento das classes de estado (Memento) sejam recuparadas do último estado salvo ao primeiro.
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+*Todo o processo foi feito em call com todos os integrantes do grupo.
