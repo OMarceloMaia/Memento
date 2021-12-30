@@ -33,7 +33,7 @@ Como pontos negativos:
 
 - A classe Memento com os atributos encapsulados da classe principal e o método de getState;
 
-- E por fim, a classe de Caretaker desenvolvida com pilha, a fim de garantir o conceito de FILO (First-in, Last-out), ou seja, que o empilhamento das classes de estado (Memento) sejam recuparadas do último estado salvo ao primeiro.
+- E por fim, a classe de Caretaker desenvolvida com pilha, a fim de garantir o conceito de FILO (First-in Last-out), ou seja, que o empilhamento das classes de estado (Memento) sejam recuparadas do último estado salvo ao primeiro.
 
 *Todo o processo foi feito em call com todos os integrantes do grupo.*
 
